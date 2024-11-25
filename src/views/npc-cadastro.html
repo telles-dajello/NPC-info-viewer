@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Cadastrar NPC</title>
-</head>
-<body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar NPC</title>
+    <link rel="stylesheet" href="/src/style/css/styles.css">
+  </head>
+  <body>
+    <header class="menu">
+      <nav>
+        <ul>
+          <li><a href="/src/views/npc-cadastro.html">Cadastrar NPC</a></li>
+          <li><a href="/src/views/npc-lista.html">Lista de NPCs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Cadastrar NPC</h1>
+        <form>
+          <label for="imagem-npc">Imagem</label>
+          <input type="file" id="imagem-npc" name="imagem-npc">
+<!--ver como funciona essas tag, fieldaet, e legend no lugar de div e h2, h3... (evitar div soup)-->
+          <div>
+            <h2>Informações Básicas</h2>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
 
-</body>
+            <label for="classe">Classe</label>
+            <input type="text" id="classe" name="classe">
+          </div>
+
+          <div>
+            <h2>Informações Biográficas</h2>
+            <textarea id="biografia" name="biografia"></textarea>
+          </div>
+
+          <div>
+            <h2>Afiliações Conhecidas</h2>
+            <textarea id="afiliacoes" name="afiliacoes"></textarea>
+          </div>
+
+          <div>
+            <h2>Habilidades Conhecidas</h2>
+            <textarea id="habilidades" name="habilidades"></textarea>
+          </div>
+
+          <button type="submit">Salvar NPC</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
