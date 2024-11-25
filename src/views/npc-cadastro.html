@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar NPC</title>
-    <link rel="stylesheet" href="/src/style/css/styles.css">
+    <link rel="stylesheet" href="/src/style/css/style.css">
   </head>
   <body>
     <header class="menu">
@@ -18,33 +18,63 @@
     <main>
       <section>
         <h1>Cadastrar NPC</h1>
-        <form>
+        <form id="formularioCadastroNPC">
           <label for="imagem-npc">Imagem</label>
-          <input type="file" id="imagem-npc" name="imagem-npc">
-<!--ver como funciona essas tag, fieldaet, e legend no lugar de div e h2, h3... (evitar div soup)-->
-          <div>
-            <h2>Informações Básicas</h2>
+          <input type="file" id="imagem-npc" name="imagem-npc" accept="image/*">
+
+          <fieldset>
+            <legend>Informações Básicas</legend>
+
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome">
 
             <label for="classe">Classe</label>
             <input type="text" id="classe" name="classe">
-          </div>
 
-          <div>
-            <h2>Informações Biográficas</h2>
-            <textarea id="biografia" name="biografia"></textarea>
-          </div>
+            <label for="grupo-carreira">Grupo de Carreira</label>
+            <input type="text" id="grupo-carreira" name="grupo-carreira">
 
-          <div>
-            <h2>Afiliações Conhecidas</h2>
-            <textarea id="afiliacoes" name="afiliacoes"></textarea>
-          </div>
+            <label for="carreira">Carreira</label>
+            <input type="text" id="carreira" name="carreira">
 
-          <div>
-            <h2>Habilidades Conhecidas</h2>
-            <textarea id="habilidades" name="habilidades"></textarea>
-          </div>
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status">
+
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" min="0">
+
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" name="altura">
+
+            <label for="peso">Peso</label>
+            <input type="text" id="peso" name="peso">
+
+            <label for="especie">Espécie</label>
+            <input type="text" id="especie" name="especie">
+
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero">
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informações Biográficas</legend>
+            <textarea id="biografia" name="biografia" rows="5"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Afiliações Conhecidas</legend>
+            <textarea id="afiliacoes" name="afiliacoes" rows="3"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Habilidades Conhecidas</legend>
+            <textarea id="habilidades" name="habilidades" rows="3"></textarea>
+          </fieldset>
+
 
           <button type="submit">Salvar NPC</button>
         </form>
